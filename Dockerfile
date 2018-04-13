@@ -8,4 +8,6 @@ ENV PATH="${NPM_CONFIG_PREFIX}/bin:${PATH}"
 
 USER node
 
-RUN npm install -g vsts-rest 
+RUN apt update &&\ 
+	apt install -y jq &&\
+	npm install -g vsts-rest 
